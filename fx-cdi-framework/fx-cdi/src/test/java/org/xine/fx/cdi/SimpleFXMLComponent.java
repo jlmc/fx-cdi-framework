@@ -6,12 +6,12 @@ import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.scene.control.Button;
 
-@FXMLComponent(location="SimpleFXMLComponent.fxml")
-public class SimpleFXMLComponent extends Button{
+@FXMLComponent(location = "simpleFXMLComponent.fxml")
+public class SimpleFXMLComponent extends Button {
 	   private final BooleanProperty hello = new SimpleBooleanProperty(this, "hello");
 
 	    public boolean isHello() {
-	        return hello.get();
+	        return this.hello.get();
 	    }
 
 	    public void setHello(final boolean hello) {
@@ -19,8 +19,8 @@ public class SimpleFXMLComponent extends Button{
 	    }
 
 	    public BooleanProperty helloProperty() {
-	        return hello;
+	        return this.hello;
 	    }
 
-		
+
 }

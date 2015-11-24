@@ -10,22 +10,15 @@ import javafx.scene.layout.AnchorPane;
 @FXMLComponent(location="AppComp.fxml")
 public class AppComp extends AnchorPane{
 	
-	
 	@Inject
 	MyService service;
-	
-	
-//	   @Inject
-//	    public void init() {
-//		   System.out.println("Compoments Init...");
-//	   }
 	   
 	@Inject
 	protected void init(){
 		   System.out.println("post AppComp");
 		   
-		   if(service != null){
-			   service.loggin();
+		   if(this.service != null){
+			   this.service.loggin();
 		   }
 	   }
 }

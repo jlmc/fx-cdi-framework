@@ -10,14 +10,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.layout.AnchorPane;
 
-
 @FXMLController(location="/CompWithController.fxml")
 public class CompWithController {
-	//org.xine.fx.cdi.CompWithController
-	
+
 	@Inject
 	private MyService myService;
-	
+
     @FXML
     private AnchorPane root;
 
@@ -26,18 +24,12 @@ public class CompWithController {
 
     @FXML
     private CheckBox myCheckbox;
-//
-//    @FXML
-//    void initialize() {
-//    	System.out.println("Sou o maior");
-//    }
-    
+
     public  Node getRootNode(){
-    	return root;
+    	return this.root;
     }
-    
-    
-   // @PostConstruct
+
+	@Inject
     public void init(){
     	System.out.println("post constructor event");
     }
